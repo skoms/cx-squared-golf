@@ -1,0 +1,61 @@
+body {
+	margin: 0;
+	background: rgb(153, 195, 254);
+	background: linear-gradient(
+		-45deg,
+		rgba(153, 195, 254, 1) 0%,
+		rgba(68, 94, 223, 1) 20%,
+		rgba(102, 178, 251, 1) 40%,
+		rgba(123, 132, 236, 1) 60%,
+		rgba(83, 132, 215, 1) 80%,
+		rgba(157, 195, 245, 1) 100%
+	);
+	background-size: 400% 400%;
+	animation: moving-gradient 25s ease infinite;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+	width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+	height: calc(100vh - 3rem - 4rem);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.322);
+	border-radius: 10px;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+@keyframes moving-gradient {
+	0% {
+		background-position: 0% 25%;
+	}
+	25% {
+		background-position: 50% 75%;
+	}
+	50% {
+		background-position: 50% 100%;
+	}
+	75% {
+		background-position: 75% 50%;
+	}
+	100% {
+		background-position: 0% 25%;
+	}
+}

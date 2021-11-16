@@ -1,0 +1,38 @@
+.container {
+	height: calc(100vh - 5rem - 3rem);
+	padding-top: 5rem;
+	padding-bottom: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-height: calc(100vh - 5rem - 3rem);
+	overflow-y: auto;
+	min-width: 60rem;
+}
+
+.container::-webkit-scrollbar-track-piece:start {
+	margin-top: 5rem;
+}
+
+.container::-webkit-scrollbar-track-piece:end {
+	margin-bottom: 3rem;
+}
+
+.toTopButton {
+	color: rgba(255, 255, 255, 0.75);
+	border: none;
+	background: rgba(26, 26, 26, 0.5);
+	padding: 0.3rem 0.5rem;
+	min-width: 100%;
+	border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.toTopButton:hover {
+	background: rgba(112, 112, 112, 0.5);
+}
+
+@media only screen and (max-width: 1000px) {
+	.container {
+		min-width: 40rem;
+	}
+}
