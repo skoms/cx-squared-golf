@@ -1,3 +1,7 @@
+/**
+ * Stores A2 or equivalent of A3 country codes
+ * with some hard-coded defaults to codes falling outside ISO-3166-3
+ */
 export const isoA3ToA2 = {
 	AND: 'AD',
 	ARE: 'AE',

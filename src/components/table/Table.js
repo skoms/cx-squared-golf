@@ -4,19 +4,21 @@ import { io } from 'socket.io-client'
 import { useDispatch } from 'react-redux'
 import { addUpdate, selectUpdates } from './tableSlice'
 import { useSelector } from 'react-redux'
-import { isoA3ToA2 } from '../../utils/alpha3To2'
+import { getFlagByA3 } from '../../utils'
 
 const Table = () => {
 	const [socket, setSocket] = useState(null)
 	const dispatch = useDispatch()
 	const updates = useSelector(selectUpdates)
 
+	// Establish SocketIO Connection
 	useEffect(() => {
 		const newSocket = io('https://mst-full-stack-dev-test.herokuapp.com/')
 		setSocket(newSocket)
 		return () => newSocket.close()
 	}, [setSocket])
 
+	// Set up SocketIO event Listener
 	useEffect(() => {
 		const updateListener = (update) => {
 			dispatch(addUpdate(update))
@@ -41,19 +43,11 @@ const Table = () => {
 				</tr>
 				{updates.length > 0 &&
 					updates.map((update) => {
-						const flag = (
-							<img
-								src={`/country-flags-16px/${(
-									isoA3ToA2[update.nationality] || 'AA'
-								).toLowerCase()}_16.png`}
-								alt=''
-							/>
-						)
 						return (
 							<tr key={update.id}>
 								<td>{update.position}</td>
 								<td className={styles.playerData}>
-									{flag}
+									{getFlagByA3(update.nationality)} {/* /utils/index.js */}
 									<p>{update.name}</p>
 								</td>
 								<td>{update.match}</td>

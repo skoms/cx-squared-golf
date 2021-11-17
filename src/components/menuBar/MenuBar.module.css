@@ -8,6 +8,17 @@
 	border-radius: 0.75rem 0.75rem 0 0;
 }
 
+.sortSelects {
+	display: flex;
+	align-items: center;
+}
+
+.selectsDesc {
+	margin: 0 0.5rem 0 0;
+	font-weight: 700;
+	color: rgba(190, 234, 252, 0.85);
+}
+
 .sortSelects select {
 	margin-right: 0.5rem;
 	min-width: 7rem;

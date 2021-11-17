@@ -8,7 +8,6 @@ function App() {
 	return (
 		<div className={styles.container}>
 			<Header />
-			<div className='flag flag-us'></div>
 			<Main />
 			<Footer />
 		</div>

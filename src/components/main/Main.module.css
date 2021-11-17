@@ -10,10 +10,10 @@
 	min-width: 60rem;
 }
 
+/* :start and :end used to line up the track with the table */
 .container::-webkit-scrollbar-track-piece:start {
 	margin-top: 5rem;
 }
-
 .container::-webkit-scrollbar-track-piece:end {
 	margin-bottom: 3rem;
 }

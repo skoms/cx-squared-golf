@@ -11,6 +11,7 @@ export const tableSlice = createSlice({
 	name: 'table',
 	initialState,
 	reducers: {
+		// Add update to front, return sorted
 		addUpdate: (state, { payload }) => {
 			const result = state
 			const update = {
@@ -29,11 +30,13 @@ export const tableSlice = createSlice({
 			result.updates = sortArrayByColumn(result.updates, state.sortBy)
 			return result
 		},
+		// Clear out updates array
 		clearUpdates: (state, { payload }) => {
 			const result = state
 			result.updates = []
 			return result
 		},
+		// Update sorting requirements
 		updateSort: (state, { payload }) => {
 			const result = state
 			result.sortBy = {
