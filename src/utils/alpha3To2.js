@@ -67,7 +67,7 @@ export const isoA3ToA2 = {
 	DOM: 'DO',
 	DZA: 'DZ',
 	ECU: 'EC',
-	ENG: 'GB',
+	ENG: 'EN',
 	EST: 'EE',
 	EGY: 'EG',
 	ESH: 'EH',
